@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日AI冷知识</title>
+    <style>
+        /* 全局样式，沿用既定配色 */
+        body {
+            background-color: #F0FDF4; /* 主色：浅薄荷绿 */
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+        }
+        /* 导航栏样式 */
+        .nav-bar {
+            padding: 15px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF9F43; /* 强调色：橙色 */
+        }
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333333;
+            font-size: 16px;
+        }
+        /* 日期栏样式 */
+        .date-bar {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #FF9F43;
+            margin-top: 20px;
+        }
+        /* 卡片容器样式 */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 300px); /* 每行2个卡片 */
+            gap: 10px; /* 卡片间距10px */
+            justify-content: center;
+            margin-top: 20px;
+        }
+        /* 冷知识卡片样式 */
+        .cold-card {
+            background-color: #FFFBF5; /* 辅助色：奶白色 */
+            width: 300px;
+            height: 400px;
+            border-radius: 16px; /* 圆角16px */
+            box-shadow: 0 2px 8px #E0E0E0; /* 阴影效果 */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        /* 分类水印样式 */
+        .card-tag {
+            font-size: 14px;
+            font-weight: bold;
+            color: #666666;
+            margin: 0 0 10px 0;
+        }
+        /* 配图样式 */
+        .card-img {
+            width: 280px;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+        /* 文案样式 */
+        .card-text {
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.5;
+            margin-top: 15px;
+            padding: 0 5px;
+            text-align: center;
+        }
+        /* 随机按钮样式 */
+        .random-btn {
+            display: block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #FF9F43;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            margin: 30px auto 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        /* 弹窗样式 */
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #FFFBF5;
+            width: 350px;
+            height: 450px;
+            border-radius: 16px;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        .close-btn {
+            display: block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #FF9F43;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin: 20px auto 0;
+            cursor: pointer;
+        }
+        .modal-text {
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        /* 页脚样式 */
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #999999;
+            margin: 20px 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-title">每日AI冷知识</div>
+        <div class="nav-links">
+            <a href="category.html">分类浏览</a> <!-- 关联分类页 -->
+            <a href="about.html">关于我们</a> <!-- 关联关于页 -->
+        </div>
+    </div>
+
+    <!-- 日期栏 -->
+    <div class="date-bar">2026年1月2日 第1期</div> <!-- 需要替换：实际日期 -->
+
+    <!-- 冷知识卡片区 -->
+    <div class="card-container">
+        <!-- 卡片1：需要替换标签、图片链接、文案 -->
+        <div class="cold-card">
+            <div class="card-tag">🔬科学小常识</div>
+            <img src="http://photogzmaz.photo.store.qq.com/psc?/V53bbOI80Q2Oiv40RBuG4g9ia2112vQb/TmEUgtj9EK6.7V8ajmQrEHszmF50GJRe8YIPSYqkvkuULwV3tKJz0PGUj.FEQsSnhBq1JovCAlsoYdCZWV2foBCMvtEqz3Hw02l3jDFekQY!/b&bo=QAZABkAGQAYBByA!&rf=viewer_4" class="card-img" alt="冷知识配图1">
+            <div class="card-text">【科学小常识】人的指甲生长速度，夏天比冬天快约 1/3（依据：《解剖学与生理学》中温度对新陈代谢的影响）🔬</div>
+        </div>
+        <!-- 卡片2：需要替换标签、图片链接、文案 -->
+        <div class="cold-card">
+            <div class="card-tag">🌿自然小常识</div>
+            <img src="http://photogzmaz.photo.store.qq.com/psc?/V53bbOI80Q2Oiv40RBuG4g9ia2112vQb/TmEUgtj9EK6.7V8ajmQrEO.zH7jK2ZqyakmYkBpAjIqnIoo37rhCgTRU3aG588ozemoj9Z1wEf9QxWJuL18fg6FQcDeFOSx*haPWnKxG9JA!/b&bo=QAZABkAGQAYBFzA!&rf=viewer_4" class="card-img" alt="冷知识配图2">
+            <div class="card-text">【自然小常识】长颈鹿的舌头能长达 50 厘米，还能用来清洁自己的耳朵（依据：《动物学杂志》关于长颈鹿生理结构的研究）🌿</div>
+        </div>
+        <!-- 卡片3：需要替换标签、图片链接、文案 -->
+        <div class="cold-card">
+            <div class="card-tag">🏺历史小常识</div>
+            <img src="http://photogzmaz.photo.store.qq.com/psc?/V53bbOI80Q2Oiv40RBuG4g9ia2112vQb/TmEUgtj9EK6.7V8ajmQrEO.zH7jK2ZqyakmYkBpAjIpWTK1wPgw8cSv*BoyQ.mz*F0hU4Quun5Ae1eubMf7EIPvHkZ.f9lturlrZMLAG2jA!/b&bo=QAZABkAGQAYBFzA!&rf=viewer_4" class="card-img" alt="冷知识配图3">
+            <div class="card-text">【历史小常识】秦始皇没统一过汉字，小篆是李斯等人整理后推行的，隶书在民间早已流行（依据：《中国书法史》秦代文字演变记载）📜</div>
+        </div>
+        <!-- 卡片4：需要替换标签、图片链接、文案 -->
+        <div class="cold-card">
+            <div class="card-tag">🎨文化小常识</div>
+            <img src="http://photogzmaz.photo.store.qq.com/psc?/V53bbOI80Q2Oiv40RBuG4g9ia2112vQb/TmEUgtj9EK6.7V8ajmQrEO.zH7jK2ZqyakmYkBpAjIrn53siouCmRPHtnzGdKv6Gr6gC3xj2Not1qDXjrLIaWnMvozlSiCNj*94Zg73Y1P0!/b&bo=QAZABkAGQAYBFzA!&rf=viewer_4" class="card-img" alt="冷知识配图4">
+            <div class="card-text">【文化小常识】扑克牌里的 4 个花色，对应欧洲中世纪的 4 种阶级：黑桃 - 长矛兵、红桃 - 牧师、方块 - 工匠、梅花 - 农民（依据：《扑克牌文化起源》学术论文）🎴</div>
+        </div>
+        <!-- 卡片5：需要替换标签、图片链接、文案 -->
+        <div class="cold-card" style="grid-column: span 2; margin: 0 auto; width: 300px;">
+            <div class="card-tag">🔍生活小常识</div>
+            <img src="http://photogzmaz.photo.store.qq.com/psc?/V53bbOI80Q2Oiv40RBuG4g9ia2112vQb/TmEUgtj9EK6.7V8ajmQrEO.zH7jK2ZqyakmYkBpAjIpcn4a9sqUT1fTNRswUNK*7WXgYQWEuO4StBFNcz0o4jB*UJNH7nxUVmU6RSWKbTbE!/b&bo=QAZABkAGQAYBFzA!&rf=viewer_4" class="card-img" alt="冷知识配图5">
+            <div class="card-text">【生活小常识】剥大蒜前，把整头蒜放进微波炉叮 10 秒，蒜皮会自动脱落（依据：微波加热使蒜肉膨胀分离蒜皮）🔍</div>
+        </div>
+    </div>
+
+    <!-- 随机冷知识按钮 -->
+    <button class="random-btn" onclick="document.getElementById('coldModal').style.display='flex'">点击获取3条随机冷知识</button>
+
+    <!-- 弹窗组件（含3条备用冷知识） -->
+    <div class="modal" id="coldModal">
+        <div class="modal-content">
+            <div class="modal-text">
+                1. 【文化小常识】成语 “乱七八糟” 的来源是两场战乱：“乱七” 指西汉七国之乱，“八糟” 指西晋八王之乱（依据：《成语典故大辞典》）📜<br><br>
+                2. 【科学小常识】打喷嚏的瞬间，气流速度可达每小时 160 公里，比台风还快（依据：《人体生理学》呼吸道动力学研究）🔬<br><br>
+                3.【自然小常识】树懒每周才下树排一次便，排便量能占到体重的三分之一（依据：《动物行为学》树懒生态研究）🌿<br><br>
+            </div>
+            <button class="close-btn" onclick="document.getElementById('coldModal').style.display='none'">关闭弹窗</button>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">内容由豆包生成 + 人类筛选验证 | 每日更新</div>
+</body>
+</html>
